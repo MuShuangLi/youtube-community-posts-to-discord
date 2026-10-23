@@ -2,7 +2,7 @@
 
 [English](AI_SETUP_PROMPT.md) | [繁體中文](AI_SETUP_PROMPT.zh-TW.md)
 
-### 如何使用這份提示詞
+## 如何使用這份提示詞
 
 1. 複製下方「AI 提示詞」區塊中的全部內容。
 2. 打開你平常使用的 AI 助手。
