@@ -2,6 +2,20 @@
 
 [English](README.md) | [繁體中文](README.zh-TW.md)
 
+## 🧭 完全不懂 GitHub 或程式設計？
+
+**沒關係，你不需要先學會寫程式。**
+
+如果你不知道 GitHub、Fork、Webhook、Secret 或 GitHub Actions 是什麼，可以讓 AI 助手一步一步帶你完成設定。
+
+👉 **[點這裡取得「AI 安裝助手提示詞」](AI_SETUP_PROMPT.zh-TW.md)**
+
+把裡面的提示詞複製給你平常使用的 AI 助手，AI 會一次帶你完成一個步驟。
+
+> 🔐 AI 不需要知道你的 Discord Webhook URL、密碼或其他秘密資訊。請勿將這些資訊提供給 AI。
+
+---
+
 自動偵測新的 **YouTube 社群貼文（Community Post）**，並透過 **GitHub Actions** 與 **Discord Webhook**，將新貼文的連結自動發送到指定的 Discord 頻道。
 
 不需要額外安裝 Discord Bot，也不需要讓自己的電腦 24 小時保持開機。
