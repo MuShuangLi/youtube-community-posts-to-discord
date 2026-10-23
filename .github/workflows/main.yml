@@ -1,0 +1,43 @@
+name: YouTube Community Posts to Discord
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  check-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check YouTube Community Posts
+        env:
+          YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python check_posts.py
+
+      - name: Save Community Post history
+        run: |
+          if git diff --quiet -- seen_posts.json && git ls-files --error-unmatch seen_posts.json >/dev/null 2>&1; then
+            echo "No Community Post history changes to save."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add seen_posts.json
+          git commit -m "Update seen Community Posts"
+          git push
