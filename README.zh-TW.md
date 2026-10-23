@@ -1,3 +1,4 @@
+# YouTube 社群貼文自動通知到 Discord
 🌏 **English users: [Click here to view the English README](README.md)**
 
 ## 🧭 完全不懂 GitHub 或程式設計？
@@ -13,7 +14,6 @@
 > 🔐 AI 不需要知道你的 Discord Webhook URL、密碼或其他秘密資訊。請勿將這些資訊提供給 AI。
 
 ---
-# YouTube 社群貼文自動通知到 Discord
 自動偵測新的 **YouTube 社群貼文（Community Post）**，並透過 **GitHub Actions** 與 **Discord Webhook**，將新貼文的連結自動發送到指定的 Discord 頻道。
 
 不需要額外安裝 Discord Bot，也不需要讓自己的電腦 24 小時保持開機。
