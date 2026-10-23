@@ -1,5 +1,7 @@
 ## 🧭 New to GitHub or programming?
 
+🌏 **繁體中文使用者：[點這裡查看繁體中文說明](README.zh-TW.md)**
+
 **No problem. You do not need to learn programming first.**
 
 If you are unfamiliar with GitHub, Forks, Webhooks, Secrets, or GitHub Actions, you can ask an AI assistant to guide you through the setup one step at a time.
