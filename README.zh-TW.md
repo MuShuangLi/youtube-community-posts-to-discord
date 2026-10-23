@@ -1,6 +1,6 @@
 # YouTube 社群貼文自動通知到 Discord
 
-[English](README.md) | [繁體中文](README.zh-TW.md)
+🌏 **English users: [Click here to view the English README](README.md)**
 
 ## 🧭 完全不懂 GitHub 或程式設計？
 
