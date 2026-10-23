@@ -12,11 +12,12 @@
 - 🤖 使用 GitHub Actions 自動執行
 - 💬 不需要額外安裝 Discord Bot
 - 🔗 自動將新的 YouTube 社群貼文連結發送到 Discord
-- 🛡️ 過濾 YouTube 頁面資料中偶爾重新出現的舊貼文，避免誤判
+- 🛡️ 過濾 YouTube 頁面資料中偶爾重新出現的舊貼文，降低誤判
 - 🔁 記錄已偵測過的貼文，避免重複通知
 - 🖥️ 不需要讓自己的電腦保持開機
 - 🔐 Discord Webhook 網址透過 GitHub Secrets 安全保存，不會直接寫在程式碼中
-- ⏱️ 每 5 分鐘自動檢查一次新的 YouTube 社群貼文
+- ⏱️ 預設每 5 分鐘自動檢查一次新的 YouTube 社群貼文
+- 🔑 不需要 YouTube API Key
 
 ## 運作方式
 
@@ -59,11 +60,11 @@ Discord Webhook
 - 建立 Discord Bot
 - YouTube API Key
 
-# 安裝教學
+## 安裝教學
 
 不需要下載程式，也不需要自己架設伺服器。完成以下設定後，GitHub Actions 就會自動執行程式。
 
-## 1. Fork 這個 Repository
+### 1. Fork 這個 Repository
 
 點擊本頁右上方的 **Fork**，將這個 Repository 複製到你自己的 GitHub 帳號。
 
@@ -71,7 +72,7 @@ Discord Webhook
 
 > ⚠️ 請勿直接在原始 Repository 中填入自己的 Discord Webhook 或其他個人設定。
 
-## 2. 取得你的 YouTube Channel ID
+### 2. 取得你的 YouTube Channel ID
 
 你需要的是以 `UC` 開頭的 YouTube Channel ID，例如：
 
@@ -89,7 +90,7 @@ UCxxxxxxxxxxxxxxxxxxxxxx
 
 請先把這串 ID 複製起來，稍後會用到。
 
-## 3. 建立 Discord Webhook
+### 3. 建立 Discord Webhook
 
 在 Discord 中進入你希望收到 YouTube 社群貼文通知的頻道。
 
@@ -111,7 +112,7 @@ UCxxxxxxxxxxxxxxxxxxxxxx
 >
 > 請勿將 Webhook URL 貼在公開的程式碼、README、Issue、留言或其他公開位置。
 
-## 4. 設定 YouTube Channel ID
+### 4. 設定 YouTube Channel ID
 
 進入你剛才 Fork 出來的 GitHub Repository。
 
@@ -143,7 +144,7 @@ UCxxxxxxxxxxxxxxxxxxxxxx
 
 YouTube Channel ID 本身不是密碼，因此使用 GitHub Repository Variable 保存即可。
 
-## 5. 設定 Discord Webhook
+### 5. 設定 Discord Webhook
 
 仍然前往：
 
@@ -175,7 +176,7 @@ GitHub Secret 儲存後不會再次直接顯示完整內容。
 
 因此你不需要、也不應該把 Discord Webhook URL 寫進 `check_posts.py` 或 `main.yml`。
 
-## 6. 開啟 GitHub Actions 寫入權限
+### 6. 開啟 GitHub Actions 寫入權限
 
 程式需要建立並更新：
 
@@ -205,7 +206,7 @@ seen_posts.json
 
 **Allow GitHub Actions to create and approve pull requests**
 
-## 7. 第一次手動執行
+### 7. 第一次手動執行
 
 完成上述設定後，進入 Repository 上方的：
 
@@ -223,7 +224,7 @@ seen_posts.json
 
 正常情況下會看到綠色的成功標記。
 
-### 第一次執行為什麼不會收到 Discord 通知？
+#### 第一次執行為什麼不會收到 Discord 通知？
 
 這是刻意設計的安全機制。
 
@@ -241,17 +242,17 @@ seen_posts.json
 
 這是正常行為，不代表程式沒有成功。
 
-## 8. 測試新貼文通知
+### 8. 測試新貼文通知
 
 第一次執行成功後，可以在自己的 YouTube 頻道發布一篇新的社群貼文。
 
 接著有兩種測試方式。
 
-### 方法 A：等待自動檢查
+#### 方法 A：等待自動檢查
 
 什麼都不用做，等待 GitHub Actions 自己執行。
 
-### 方法 B：立即手動測試
+#### 方法 B：立即手動測試
 
 進入：
 
@@ -267,7 +268,7 @@ https://www.youtube.com/post/...
 
 也就是你剛剛發布的 YouTube 社群貼文連結。
 
-## 9. 自動執行
+### 9. 自動執行
 
 設定完成後，平常不需要再手動執行 Workflow。
 
@@ -287,7 +288,7 @@ GitHub Actions 預設會：
 >
 > 設定為每 5 分鐘檢查，不代表一定會精確在每個第 00、05、10、15 分鐘執行。GitHub 忙碌時可能稍微延遲。
 
-# 判斷新貼文的方式
+## 判斷新貼文的方式
 
 YouTube Community 頁面的資料並不一定每次都會以完全相同的順序或內容出現。
 
@@ -303,25 +304,25 @@ YouTube Community 頁面的資料並不一定每次都會以完全相同的順�
 
 只有符合條件的新貼文才會送到 Discord。
 
-目前預設只會將 **6 小時內發布、而且以前沒有偵測過的貼文**視為可以通知的新貼文。
+目前預設只會將 **6 小時內發布，而且以前沒有偵測過的貼文**視為可以通知的新貼文。
 
 如果 YouTube 無法提供可靠的發布時間，程式會選擇 **不發送通知**，以降低舊貼文被誤發到 Discord 的機率。
 
-# 常見情況
+## 常見情況
 
-## 編輯已發布的 YouTube Post
+### 編輯已發布的 YouTube Post
 
 編輯原本的社群貼文不會再次發送 Discord 通知。
 
 因為編輯後仍然是同一個 Post ID，而程式已經記錄這個 ID。
 
-## 刪除 YouTube Post
+### 刪除 YouTube Post
 
 刪除一篇已發布的貼文不會影響之後的新貼文偵測。
 
 它的 Post ID 仍然會保留在 `seen_posts.json` 的歷史記錄中。
 
-## 刪除後重新發布
+### 刪除後重新發布
 
 如果刪除一篇貼文後重新發布，YouTube 會為重新發布的貼文建立新的 Post ID。
 
@@ -329,7 +330,7 @@ YouTube Community 頁面的資料並不一定每次都會以完全相同的順�
 
 Discord 中原本舊貼文的通知不會自動刪除。
 
-## Discord 收到舊貼文
+### Discord 收到舊貼文
 
 YouTube 有時可能會在 Community 頁面資料中重新出現較舊的貼文。
 
@@ -353,7 +354,7 @@ YouTube 有時可能會在 Community 頁面資料中重新出現較舊的貼文�
 
 被判定為舊貼文後，它仍會被加入已看過記錄，避免之後重複判斷。
 
-# 安全提醒
+## 安全提醒
 
 - 請勿公開你的 `DISCORD_WEBHOOK_URL`
 - 請勿直接把 Webhook URL 寫進程式碼
@@ -361,14 +362,14 @@ YouTube 有時可能會在 Community 頁面資料中重新出現較舊的貼文�
 - 如果 Webhook URL 不小心公開，請立即在 Discord 中刪除／重新建立該 Webhook
 - `YOUTUBE_CHANNEL_ID` 本身不是密碼，可以使用 GitHub Repository Variable 保存
 
-# 語言
+## 語言
 
 - [English](README.md)
 - [繁體中文](README.zh-TW.md)
 
 歡迎透過 Pull Request 協助新增其他語言的翻譯。
 
-# 授權
+## 授權
 
 本專案採用 **MIT License**。
 
