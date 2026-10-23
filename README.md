@@ -9,8 +9,10 @@ If you are unfamiliar with GitHub, Forks, Webhooks, Secrets, or GitHub Actions, 
 Copy the prompt and paste it into the AI assistant you normally use. The AI will guide you through one step at a time.
 
 > 🔐 The AI does not need your Discord Webhook URL, passwords, or other secret information. Do not share these with an AI assistant.
-
 ---
+Automatically detect new **YouTube Community Posts** and send their links to a specified Discord channel using **GitHub Actions** and a **Discord Webhook**.
+
+No Discord bot, always-on computer, or self-hosted server is required.
 
 ## Features
 
