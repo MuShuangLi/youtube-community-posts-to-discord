@@ -2,12 +2,6 @@
 
 [English](AI_SETUP_PROMPT.md) | [繁體中文](AI_SETUP_PROMPT.zh-TW.md)
 
-## 完全不懂 GitHub 或程式設計？
-
-如果你幾乎沒有 GitHub、程式設計、Python、GitHub Actions 或 Discord Webhook 的使用經驗，可以讓 AI 助手一步一步帶你完成整個安裝流程。
-
-你不需要先學會寫程式。
-
 ### 如何使用這份提示詞
 
 1. 複製下方「AI 提示詞」區塊中的全部內容。
