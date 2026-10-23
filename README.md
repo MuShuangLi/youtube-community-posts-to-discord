@@ -1,3 +1,5 @@
+# Automatic notifications for YouTube social media posts to Discord
+
 ## 🧭 New to GitHub or programming?
 
 🌏 **繁體中文使用者：[點這裡查看繁體中文說明](README.zh-TW.md)**
