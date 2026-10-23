@@ -2,11 +2,7 @@
 
 [English](AI_SETUP_PROMPT.md) | [繁體中文](AI_SETUP_PROMPT.zh-TW.md)
 
-## New to GitHub or programming?
-
-If you have little or no experience with GitHub, programming, Python, GitHub Actions, or Discord Webhooks, you can ask an AI assistant to guide you through the setup one step at a time.
-
-### How to use this prompt
+## How to use this prompt
 
 1. Copy everything inside the prompt below.
 2. Open the AI assistant you normally use.
