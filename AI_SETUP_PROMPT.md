@@ -77,6 +77,32 @@ YOUTUBE_CHANNEL_ID
 - new posts are sent to the intended Discord channel,
 - and the automatic schedule is enabled.
 
+20. If the first GitHub Actions run fails at the "Check YouTube Community Posts" step with:
+
+    No YouTube Community Post URLs were found.
+
+    Do not immediately modify the code. Please help me check the following in order:
+
+    - Whether YOUTUBE_CHANNEL_ID is correct.
+    - Whether the YouTube channel has enabled the "Community" page.
+    - Whether the YouTube channel has at least one public Community Post.
+
+21. If the YouTube channel has never published any Community Posts, the first run may fail because no Community Post URL can be found.
+
+    If this happens, first guide me to publish one public Community Post on YouTube.
+
+    After publishing it, wait about 5 minutes, then return to:
+
+    GitHub Repository → Actions → YouTube Community Posts to Discord
+
+    Then click "Run workflow" → "Run workflow" to run it again.
+
+    If the same error still appears after waiting, first check whether the channel has enabled the "Community" page and whether the public post can be viewed while not signed in to that YouTube account.
+
+22. If YouTube shows an option to "Enable Community" and the Workflow continues to report that no Community Post URL can be found, guide me to enable the Community page first and then test the Workflow again.
+
+    Do not modify check_posts.py or main.yml just because of this error.
+
 Start by explaining, in simple terms, what this project does.
 
 Then give me ONLY the first setup step and wait for my response.
