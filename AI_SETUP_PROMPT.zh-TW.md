@@ -87,6 +87,32 @@ YOUTUBE_CHANNEL_ID
 接著只告訴我「第一個設定步驟」。
 
 說完第一個步驟後請停止，等待我的回覆，不要繼續第二步。
+
+20. 如果第一次執行 GitHub Actions 時，在「Check YouTube Community Posts」步驟出現：
+
+    No YouTube Community Post URLs were found.
+
+    請不要立刻修改程式碼。請依序協助我確認：
+
+    - YOUTUBE_CHANNEL_ID 是否正確。
+    - YouTube 頻道是否已啟用「社群」頁面。
+    - YouTube 頻道是否至少有一篇公開的社群貼文。
+
+21. 如果 YouTube 頻道從未發布過任何「社群貼文」，第一次執行可能會因為找不到 Community Post URL 而失敗。
+
+    遇到這種情況時，請先帶我在 YouTube 發布一篇公開的社群貼文。
+
+    發布後先等待約 5 分鐘，再回到：
+
+    GitHub Repository → Actions → YouTube Community Posts to Discord
+
+    然後點擊「Run workflow」→「Run workflow」重新執行。
+
+    如果等待後仍然出現相同錯誤，請先檢查該頻道是否已啟用「社群」頁面，以及公開貼文是否能在未登入該 YouTube 帳號的情況下正常看到。
+
+22. 如果 YouTube 顯示可以「啟用『社群』頁面」，而 Workflow 持續找不到 Community Post URL，請先引導我啟用「社群」頁面，再重新測試。
+
+    不要因為這個錯誤直接修改 check_posts.py 或 main.yml。
 ```
 
 ## 重要提醒
