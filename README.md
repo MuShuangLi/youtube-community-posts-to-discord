@@ -27,8 +27,9 @@ No Discord bot, always-on computer, or self-hosted server is required.
 - 🔁 Keeps track of detected posts to prevent duplicate notifications
 - 🖥️ Your computer does not need to stay on
 - 🔐 Discord Webhook URL is securely stored using GitHub Secrets instead of being written directly into the code
-- ⏱️ Checks for new YouTube Community Posts every 5 minutes by default
-- 🔑 No YouTube API key required
+- ⏱️ GitHub Actions is scheduled to check for new YouTube community posts every 5 minutes
+- 🔑 No YouTube API Key required
+> ⚠️ GitHub Actions scheduling may be delayed, so the actual check interval is not guaranteed to be 5 minutes.
 
 ## How It Works
 
