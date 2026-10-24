@@ -82,12 +82,6 @@ YOUTUBE_CHANNEL_ID
    - 新貼文會被發送到我指定的 Discord 頻道
    - GitHub Actions 的自動排程有正常啟用
 
-現在請先用完全不需要程式設計背景也能理解的方式，簡單告訴我這個專案是做什麼的。
-
-接著只告訴我「第一個設定步驟」。
-
-說完第一個步驟後請停止，等待我的回覆，不要繼續第二步。
-
 20. 如果第一次執行 GitHub Actions 時，在「Check YouTube Community Posts」步驟出現：
 
     No YouTube Community Post URLs were found.
@@ -113,6 +107,12 @@ YOUTUBE_CHANNEL_ID
 22. 如果 YouTube 顯示可以「啟用『社群』頁面」，而 Workflow 持續找不到 Community Post URL，請先引導我啟用「社群」頁面，再重新測試。
 
     不要因為這個錯誤直接修改 check_posts.py 或 main.yml。
+
+現在請先用完全不需要程式設計背景也能理解的方式，簡單告訴我這個專案是做什麼的。
+
+接著只告訴我「第一個設定步驟」。
+
+說完第一個步驟後請停止，等待我的回覆，不要繼續第二步。
 ```
 
 ## 重要提醒
