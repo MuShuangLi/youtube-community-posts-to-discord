@@ -251,6 +251,30 @@ Therefore:
 
 This is expected behavior and does not mean the program failed.
 
+> ⚠️ **Note: If your YouTube channel has never published a Community Post**
+>
+> The first run may fail because no Community Post URL can be found.
+>
+> If this happens, first go to YouTube and publish one **public Community Post**.
+>
+> After publishing it, wait about **5 minutes**, then return to:
+>
+> **GitHub Repository → Actions → YouTube Community Posts to Discord**
+>
+> Click:
+>
+> **Run workflow → Run workflow**
+>
+> to run the workflow again.
+>
+> If the same error still appears after waiting, please check:
+>
+> - Whether the YouTube channel has enabled the **Community** page.
+> - Whether the Community Post you just published is set to **Public**.
+> - Whether the post can still be viewed while you are signed out of that YouTube account.
+>
+> If all of the above are correct but the same error still occurs, first check the error log under **Check YouTube Community Posts** in GitHub Actions before troubleshooting further.
+
 ### 8. Test a New Post Notification
 
 After the first run succeeds, publish a new Community Post on your YouTube channel.
