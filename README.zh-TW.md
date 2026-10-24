@@ -29,7 +29,7 @@
 - 🖥️ 不需要讓自己的電腦保持開機
 - 🔐 Discord Webhook 網址透過 GitHub Secrets 安全保存，不會直接寫在程式碼中
 - ⏱️ GitHub Actions 排程設定為每 5 分鐘檢查一次新的 YouTube 社群貼文
-  ⚠️ GitHub Actions 的排程可能延遲，因此實際檢查間隔不保證為 5 分鐘。
+> ⚠️ GitHub Actions 的排程可能延遲，因此實際檢查間隔不保證為 5 分鐘。
 - 🔑 不需要 YouTube API Key
 
 ## 運作方式
