@@ -254,6 +254,30 @@ seen_posts.json
 
 這是正常行為，不代表程式沒有成功。
 
+> ⚠️ **注意：如果你的 YouTube 頻道從未發布過任何「社群貼文（Community Post）」**
+>
+> 第一次執行時，可能會因為找不到 Community Post URL 而出現錯誤。
+>
+> 如果遇到這種情況，請先前往 YouTube，發布一篇**公開的社群貼文**。
+>
+> 發布後等待約 **5 分鐘**，再回到：
+>
+> **GitHub Repository → Actions → YouTube Community Posts to Discord**
+>
+> 點擊：
+>
+> **Run workflow → Run workflow**
+>
+> 重新執行一次。
+>
+> 如果等待後仍然出現相同錯誤，請確認：
+>
+> - YouTube 頻道是否已啟用「社群」頁面。
+> - 剛發布的社群貼文是否為**公開**狀態。
+> - 在未登入該 YouTube 帳號的情況下，是否仍能正常看到這篇貼文。
+>
+> 如果以上項目都正常，但仍然出現相同錯誤，請先查看 GitHub Actions 中 **Check YouTube Community Posts** 的錯誤紀錄，再進一步排查問題。
+
 ### 8. 測試新貼文通知
 
 第一次執行成功後，可以在自己的 YouTube 頻道發布一篇新的社群貼文。
